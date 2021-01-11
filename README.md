@@ -21,11 +21,6 @@ Untuk memenuhi nilai UAS
 
 **Penjelasan:**
 
-**Controller**
-* ``mahasiswa = {}`` untuk menampung list data yang nanti akan terinput
-* menambahkan fungsi yang nanti nya akan di deklarasikan di setiap module nya, ``def input_nama():`` ``def input_nim():`` dan yg lainnya, yang nanti akan di masukkan kedalam ``data={}``
-* Nilai akhir didapat dari ``nilai_akhir = (nilai_tugas)*30/100 + (nilai_uts)*35/100 + (nilai_uas)*35/100``
-
 **Model**
 
 Tambah data
@@ -42,7 +37,7 @@ Ubah data
 * ``if nama in mahasiswa.keys(): print("Mau mengubah apa?")`` jika 'nama' dari di dalam 'mahasiswa' maka akan mengembalikan daftar menggunakan fungsi 'keys()' lalu di cetak lah 'print()'
 * ``tanya = input("(Semua), (Nama), (NIM), (Tugas), (UTS), (UAS) : ")`` membuat menu ubah di dalam ``tanya``
 * lalu cetak ``print("\nBerhasil ubah data!")``
-* Jika kita ingin mengubah data tertentu maka ``elif sub_data.lower() == "nim": data[nama][1] = input("NIM:")`` dan berlaku juga untuk nilai tugas, UTS dan UAS
+* Jika kita ingin mengubah data tertentu maka ``elif tanya.lower() == "nim": mahasiswa[nama][1] = input("NIM:")`` dan berlaku juga untuk nilai tugas, UTS dan UAS
 * lalu cetak ``print("\nBerhasil ubah data!")``
 * ``else: print("'{}' tidak ditemukan.".format(nama))`` jika kita salah dalam memasukkan nama untuk mengubah data maka akan muncul 'nama tidak di temukan'
 
@@ -50,7 +45,7 @@ Ubah data
 Cari data
 * deklarasikan fungsi ``def cari_data():``
 * ``nama = input("Masukan nama untuk mencari data: ")`` kita akan menginput data yang nanti akan di cari
-* ``if nama in data.keys():`` kita mengambil list 'nama' di dalam 'data' menggunakan pengkondisian
+* ``if nama in data.keys():`` kita mengambil list 'nama' di dalam 'mahasiswa' menggunakan pengkondisian
 * maka cetak ``print("Nama: {0}\nNIM : {1}\nNilai Tugas: {2}\nUTS: {3}\nUAS: {4}\nNilai akhir: {5}"`` untuk menampilkan data yang tersedia
 * ``else: print("'{}' tidak ditemukan.".format(nama))`` jika data yang kita input salah/tidak ditemukan maka akan tercetak 'nama tidak di temukan'
 
@@ -58,7 +53,7 @@ Hapus data
 * deklarasikan fungsi ``def hapus_data():``
 * ``nama = input("Masukan nama untuk menghapus data : ")`` kita akan menginput data yang nanti akan di hapus
 * ``if nama in mahasiswa.keys():`` kita mengambil list 'nama' di dalam 'data' menggunakan pengkondisian
-* ``del mahasiswa[nama]`` hapus semua 'nama'  yang ada di dalam 'data'
+* ``del mahasiswa[nama]`` hapus semua 'nama'  yang ada di dalam 'mahasiswa'
 * jika sudah maka cetak ``print("tanya '{}' berhasil dihapus.".format(nama))``
 * ``else: print("'{}' tidak ditemukan.".format(nama))`` jika data yang kita input salah/tidak ditemukan maka akan tercetak 'nama tidak di temukan'
 
